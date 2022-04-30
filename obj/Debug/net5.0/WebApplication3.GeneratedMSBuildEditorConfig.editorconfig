@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = WebApplication3
-build_property.ProjectDir = C:\Users\mateu\Desktop\Nova pasta\WebApi\
+build_property.ProjectDir = C:\Users\mateu\Desktop\Web Api\WebApi\

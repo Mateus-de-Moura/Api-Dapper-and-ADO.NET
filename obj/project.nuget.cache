@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yWIN1itxK3QOuGWD/iLa8fSGdw+ECfitLlB4aojAi/y5/t8RfOTls/xhBOk2WLB/7YAmZ7cRCENr2JPvb13Aeg==",
+  "dgSpecHash": "K0jfOgk53WC7VK4DEauzpm+uh3oNb7eKXLWcjThqUO9mCjpSJ4503ovpqepAadI4uAag1vaNVZ02CBzuJSB1Uw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateu\\Desktop\\Nova pasta\\WebApi\\WebApplication3.csproj",
+  "projectFilePath": "C:\\Users\\mateu\\Desktop\\Web Api\\WebApi\\WebApplication3.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mateu\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\mateu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

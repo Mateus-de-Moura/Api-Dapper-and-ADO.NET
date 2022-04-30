@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApi.DAO;
 using WebApi.MODEL;
+using WebApplication3.DAO;
 
 namespace WebApplication3.Controllers
 {
@@ -13,37 +14,43 @@ namespace WebApplication3.Controllers
     [Route("[controller]")]
     public class Controller : ControllerBase
     {
-        private readonly Pessoa _pessoaModel;
+        // private readonly Pessoa _pessoaModel;
+        
+        private readonly IpessoaDao _pessoaModelDapper;
+
         public Controller()
         {
-            _pessoaModel = new Pessoa();
+            _pessoaModelDapper = new Pessoa();
         }
 
         [HttpGet]
         public IEnumerable<PessoaModel> Get()
         {
-            return _pessoaModel.GetPessoas();
+            return _pessoaModelDapper.Get();
         }
         [HttpGet("{Id}")]
-        public IEnumerable<PessoaModel> Get(int Id)
+        public IActionResult Get(int Id)
         {
-            return _pessoaModel.GetPessoaId(Id);
+            var usuario = _pessoaModelDapper.Get(Id);
+          
+            return Ok(usuario);
         }
         [HttpPost]
-        public void Post(PessoaModel pessoa)
+        public IActionResult Post([FromBody]PessoaModel pessoa)
         {
-            _pessoaModel.InserPessoa(pessoa);
-
+            _pessoaModelDapper.Insert(pessoa);
+            return Ok(pessoa);
         }
         [HttpPut]
-        public void Put(PessoaModel pessoa)
+        public IActionResult Put([FromBody]PessoaModel pessoa)
         {
-            _pessoaModel.UpdatePessoa(pessoa);
+            _pessoaModelDapper.Update(pessoa);
+            return Ok(pessoa);
         }
         [HttpDelete]
         public void Delete(int ID) 
         {
-            _pessoaModel.DeletarPessoa(ID);
+            _pessoaModelDapper.Delete(ID);
         }
     }
 }
